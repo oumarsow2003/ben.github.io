@@ -1,0 +1,134 @@
+/*   GLOBAL */
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    width:1215px;
+    margin:0 auto;
+    position:relative;
+}
+ul {
+    list-style-type: none;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+/* HEADER */
+#title{
+    font-size:2em;
+    text-transform: uppercase;
+    
+}
+header .wrapper{
+    padding:5px 0 5px 0;
+    display: flex;
+    justify-content: space-between
+}
+header a{
+    color:black;
+}
+header .header-left {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:150px;
+    font-size:2em;   
+}
+header .header-left span {
+    background-color:black;
+    border:2px solid white;
+    color:white;
+    position:absolute;
+    display: block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    font-size:0.4em;
+    border-radius:8rem;
+    top:23px;
+}
+header nav{
+    opacity: 0;
+    width:350px;
+    position: absolute;
+    right:100px;
+    top:20px;
+    font-weight:600;
+    line-height:1.5;
+    transition: all 700ms;
+}
+.x{
+    position:absolute;
+    right:4px;
+    transition:all 700ms;
+    opacity:0;
+    z-index:-1;
+}
+.bars{
+    transition: all 700ms;
+    opacity: 1;
+}
+header nav ul {
+    display:flex;
+    justify-content: space-around;
+}
+header .shopping-icon{
+    opacity: 1;
+    transition: all 600ms;
+}
+header nav ul li {
+    position: relative;
+}
+header nav ul li ul{
+    display: flex;
+    flex-direction: column;
+    z-index:3;
+    position:absolute;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.651);
+    box-shadow: 0.5px 0.5px 1px 0.2px rgba(128, 128, 128, 0.63);
+    border-radius:3px;
+    padding: 8px 26px 8px 26px;
+    font-size:0.8em;
+    left:-58px;
+    top:30px;
+    transition:all 200ms ease-in-out;
+    opacity:0;
+}
+header nav ul li:hover ul{
+    opacity:1;
+}
+header nav ul li ul  a {
+    color:rgb(52, 52, 90);
+}
+/* BANNER */
+.banner{
+    overflow: hidden;
+    z-index:1;
+}
+.banner img{
+    width:100%;
+    height:600px;
+    object-fit: cover;
+    
+}
+.slide-zone{
+    width:200%;
+    display: flex;
+    animation: banner-slide 14000ms infinite;
+}
+/* KEYFRAMES */
+@keyframes banner-slide {
+    0%,10%,20%,30%,40%,100%{
+        transform : translateX(0%)
+    }
+    50%,60%,70%,80%,90%{
+        transform : translateX(-50%);
+    }
+}
